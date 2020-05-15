@@ -44,7 +44,7 @@ namespace Tekla.Technology.Akit.UserScript
                         cld.SetDrawerMethod(new ProfilePartCenterLinesDrawer());                       
                     }
                     else
-                    if (SelectModelObject(part.ModelIdentifier.ID) is TSM.ContourPlate)
+                    if (SelectModelObject(part.ModelIdentifier.ID) is TSM.ContourPlate || GetPartProfileType(part).Contains("B"))
                     {
                         cld.SetDrawerMethod(new PlateCenterLinesDrawer());
                     }
